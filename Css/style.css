@@ -4,6 +4,19 @@
 .Heading{
     text-align: center;
 }
+.SubHeading{
+    font-size: x-large;
+    font-weight: bolder;
+}
+.Unordered_list{
+    list-style-position: inside;
+    font-family: 'Comic Sans MS';
+    font-weight: 500;
+    font-size:x-large;
+    text-align: left;
+    margin: auto;
+    width:fit-content;
+}
 body{
     font-family: 'Poppins', sans-serif;
 }
