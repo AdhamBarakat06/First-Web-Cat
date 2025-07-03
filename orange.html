@@ -17,10 +17,12 @@
   <h2 class="Heading"><span style="background-color: coral;">ORANGE FAN PAGE!</span></h2><!--H2-->
   <br>
   <div style="margin: auto;width:fit-content;text-align: center;">
+    <p id="NameDisplay" class="CatchyDisplay"></p>
+    <br>
     <a href="https://www.tiktok.com/@funnycats0ftiktok/video/7341403761887284523?lang=en" target=_blank>
       <img src="html_stock/ORANGE.jpg" height="400" alt="Goofy guy (pic of orange cat)" title="meow :3" style="margin: auto;width:fit-content;">
     </a>
-    <p class="SubHeading">Why you should love them love about them:<small><i>(cause they're)</i></small></p>
+    <p class="SubHeading">Why you should love them:<small><i>(cause they're)</i></small></p>
     <ul class="Unordered_list">
       <li>Silly</li>
       <li>Goofy</li>
@@ -28,6 +30,40 @@
       <li>Cuties</li>
       <li>Dumbies<sub>(complement)</sub></li>
     </ul>
+    <br>
+    <p class="SubHeading">Register a nickname to the Orange fan page:</p>
+    <form id="OrangeForm" class="Unordered_list">
+      <label for="ajective">Ajective:</label>
+      <select id="ajective" name="ajective" required>
+        <option value="Wobbly">Wobbly</option>
+        <option value="Goofy">Goofy</option>
+        <option value="Zany">Zany</option>
+        <option value="Bubbly">Bubbly</option>
+        <option value="Snazzy">Snazzy</option>
+      </select>
+      <label for="noun">Noun:</label>
+      <select id="noun" name="noun" required>
+        <option value="Bean">Bean</option>
+        <option value="Muffin">Muffin</option>
+        <option value="Goofball">Goofball</option>
+        <option value="Nugget">Nugget</option>
+        <option value="Sprout">Sprout</option>
+      </select>
+      <br>
+      <br>
+      <div style="text-align: center;"><input type="submit"></div>
+    </form>
   </div>
+  <script>
+    document.getElementById("OrangeForm").addEventListener("submit", function(event)
+    {
+      event.preventDefault(); // prevent page reload
+      const formData = new FormData(event.target);
+      const Ajective = formData.get("ajective");
+      const Noun = formData.get("noun");
+      alert(`Welcome to the orange cat fan club ${Ajective} ${Noun}!`);
+      document.getElementById("NameDisplay").innerHTML = `Welcome to the Orange cat fan club ${Ajective} ${Noun}!`
+    });
+</script>
 </body>
 </html>

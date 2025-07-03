@@ -17,6 +17,11 @@
     margin: auto;
     width:fit-content;
 }
+.CatchyDisplay{
+    font-family: 'Fredoka', sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+}
 body{
     font-family: 'Poppins', sans-serif;
 }

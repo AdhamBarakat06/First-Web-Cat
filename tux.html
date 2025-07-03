@@ -17,6 +17,8 @@
   <h2 class="Heading"><span style="color: aliceblue;background-color: black;">TUX FAN PAGE!</span></h2><!--H2-->
   <br>
   <div style="text-align: center;">
+    <p id="NameDisplay" class="CatchyDisplay"></p>
+    <br>
   <a href="https://www.instagram.com/remmys.friends/reel/DDbRMMcOMsm/" target=_blank>
     <img src="html_stock/TUX.jpg" height="400" alt="Spiffingly splendid (pic of a tuxedo cat)" title="prrrrr :3" >
   </a>
@@ -24,7 +26,7 @@
   <a href="https://www.youtube.com/watch?v=d5mdJf5RUyk" target=_blank>
     <video autoplay muted loop src="html_stock/Maxwell The Cat Spinning (Remastered 4K 60fps).mp4" alt="SPIIIINNN(Spinning Cat)" height="200" title="MAOW :3"></video>
   </a>
-  <p class="SubHeading">Why you should love them love about them:<small><i>(cause they're)</i></small></p>
+  <p class="SubHeading">Why you should love them:<small><i>(cause they're)</i></small></p>
     <ul class="Unordered_list">
       <li>Spiffing</li>
       <li>Stylish</li>
@@ -32,6 +34,39 @@
       <li>Cuties</li>
       <li>Elagent</li>
     </ul>
+  <p class="SubHeading">Register a nickname to the Tux fan page:</p>
+    <form id="OrangeForm" class="Unordered_list">
+      <label for="ajective">Ajective:</label>
+      <select id="ajective" name="ajective" required>
+        <option value="Wobbly">Wobbly</option>
+        <option value="Goofy">Goofy</option>
+        <option value="Zany">Zany</option>
+        <option value="Bubbly">Bubbly</option>
+        <option value="Snazzy">Snazzy</option>
+      </select>
+      <label for="noun">Noun:</label>
+      <select id="noun" name="noun" required>
+        <option value="Bean">Bean</option>
+        <option value="Muffin">Muffin</option>
+        <option value="Goofball">Goofball</option>
+        <option value="Nugget">Nugget</option>
+        <option value="Sprout">Sprout</option>
+      </select>
+      <br>
+      <br>
+      <div style="text-align: center;"><input type="submit"></div>
+    </form>
   </div>
+  <script>
+    document.getElementById("OrangeForm").addEventListener("submit", function(event)
+    {
+      event.preventDefault(); // prevent page reload
+      const formData = new FormData(event.target);
+      const Ajective = formData.get("ajective");
+      const Noun = formData.get("noun");
+      alert(`Welcome to the Tux cat fan club ${Ajective} ${Noun}!`);
+      document.getElementById("NameDisplay").innerHTML = `Welcome to the Tux cat fan club ${Ajective} ${Noun}!`
+    });
+</script>
 </body>
 </html>
